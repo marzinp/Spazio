@@ -24,7 +24,7 @@ class I {
 			this.start++;
 			if(this.start>this.delay&&((100*this.angle%77)<1)){
 				this.start=0;
-				this.delay=random(10,300);
+				this.delay=random(50,300);
 				this.playing=!this.playing;
 			}
   }
