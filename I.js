@@ -22,9 +22,9 @@ class I {
     			line(0,-ech*250,-ech*10,-ech*230);
     			pop();	
 			this.start++;
-			if(this.start>this.delay&&((100*this.angle%77)<10)){
+			if(this.start>this.delay&& abs(this.angle)%(.25*PI)<.02){
 				this.start=0;
-				this.delay=random(50,300);
+				this.delay=random(10,300);
 				this.playing=!this.playing;
 			}
   }
