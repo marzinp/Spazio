@@ -5,16 +5,15 @@ class I {
     this.angle=angle;
     this.sens=sens;
 		this.playing=false;
-		this.delay=random(50,300);
+		this.delay=int(random(1,10))*25;
 		this.start=0;
   }
 
   display() {  
-		if (this.playing)this.angle+=.03*this.sens;
+		if (this.playing)this.angle+=PI*this.sens*0.01;
      			push();
     			translate(ech*this.position.x,this.position.y);
-   			 	rotate(this.angle);
-    			
+   			 	rotate(this.angle);    			
     			stroke(this.col);
     			strokeWeight(ech*4);
     			line(0,0,0,-ech*250);
@@ -22,10 +21,9 @@ class I {
     			line(0,-ech*250,-ech*10,-ech*230);
     			pop();	
 			this.start++;
-			if(this.start>this.delay&& abs(this.angle)%(.25*PI)<.02){
+			if(this.start>=this.delay){
 				this.start=0;
-                                this.sens=random(1)>.5?-1:1;
-				this.delay=random(10,300);
+				this.delay=int(random(1,10))*25;
 				this.playing=!this.playing;
 			}
   }
