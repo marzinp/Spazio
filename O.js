@@ -6,14 +6,14 @@ class O {
     this.angle=0;
     this.sens=sens;
 		this.playing=false;
-		this.delay=random(50,300);
+		this.delay=int(random(1,10))*100;
 		this.start=0;
   }
 
   display() {   
     push();
     translate(ech*this.position.x, this.position.y);
-    if (this.playing)this.angle+=.1*this.sens;
+    if (this.playing)this.angle+=PI*this.sens*0.025;
 		rotate(this.angle);
     stroke(this.colB);
     fill(this.colB);
@@ -24,10 +24,10 @@ class O {
     ellipse(0, 0, ech*65, ech*65);
     pop();
 		this.start++;
-			if(this.start>this.delay && abs(this.angle)%HALF_PI<.02){
+			if(this.start>=this.delay){
 				this.start=0;
-                                this.sens=random(1)>.5?-1:1
-				this.delay=random(50,300);
+				this.sens=random(1)>.5?-1:1
+				this.delay=int(random(1,10))*100;
 				this.playing=!this.playing;
 			}
   }
