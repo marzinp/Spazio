@@ -23,6 +23,7 @@ class I {
 			this.start++;
 			if(this.start>=this.delay){
 				this.start=0;
+				this.sens=random(1)>.5?-1:1;
 				this.delay=int(random(1,10))*25;
 				this.playing=!this.playing;
 			}
