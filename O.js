@@ -26,6 +26,7 @@ class O {
 		this.start++;
 			if(this.start>this.delay && abs(this.angle)%HALF_PI<.02){
 				this.start=0;
+                                this.sens=random(1)>.5?-1:1
 				this.delay=random(50,300);
 				this.playing=!this.playing;
 			}
