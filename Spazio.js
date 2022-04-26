@@ -23,7 +23,7 @@ function setup() {
     new Letter("Z", new p5.Vector(600, .4*height), col1), new I(new p5.Vector(700, .4*height), col3, 0, 1), new O(new p5.Vector(800, .4*height), col3, col3, 1)];
   cosmico=[new Letter("C", new p5.Vector(300, .6*height), col1), new O(new p5.Vector(420, .6*height), col1, col1, -1), new Letter("S", new p5.Vector(530, .6*height), col2)
     ,new Letter("M", new p5.Vector(630, .6*height), col1), new I(new p5.Vector(720, .6*height), col3, 0, -1), new Letter("C", new p5.Vector(800, .6*height), col1), new O(new p5.Vector(900, .6*height), col3, col3, 1), 
-    new I(new p5.Vector(547, .583*height), col3, random(PI), 1), new I(new p5.Vector(1100, .5*height), col3, HALF_PI, -1), new I(new p5.Vector(1100, .5*height), col3, HALF_PI, 1)];
+    new I(new p5.Vector(547, .583*height), col3, int(random(9))*.25*PI, 1), new I(new p5.Vector(1100, .5*height), col3, HALF_PI, -1), new I(new p5.Vector(1100, .5*height), col3, HALF_PI, 1)];
 }
 
 
